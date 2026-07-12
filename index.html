@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライベートサロン アイデアル｜腸から健康で美しく幸せに</title>
+<meta name="description" content="熊本市のプライベートサロン アイデアル。腸もみ・リンパケアで巡りを整え、内側と外側の両方から女性の不調にアプローチします。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:        #FFFFFF;  /* ベース：白 */
+  --bg-soft:   #F7F3EA;  /* セクション交互色：淡ベージュ */
+  --bg-deep:   #EADFCB;
+  --beige:     #E8DCC6;
+  --accent:    #A8845C;  /* ブラウンベージュ */
+  --accent-dk: #8C6A44;
+  --green:     #7FA97A;  /* 差し色：淡いグリーン（腸活・乳酸菌） */
+  --green-dk:  #5F8A5C;
+  --green-soft:#F0F6EC;
+  --green-line:#D6E6D0;
+  --text:      #4E4237;
+  --text-soft: #7A6C5D;
+  --white:     #FFFDF9;
+  --serif: "Shippori Mincho", serif;
+  --sans:  "Zen Kaku Gothic New", sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--sans);
+  color:var(--text);
+  background:#E9E2D6;
+  line-height:1.9;
+  font-size:15px;
+  letter-spacing:.04em;
+  -webkit-font-smoothing:antialiased;
+}
+/* スマホ最適：中央480px固定 */
+.wrap{
+  max-width:480px;
+  margin:0 auto;
+  background:var(--bg);
+  overflow-x:hidden;
+  position:relative;
+}
+img{max-width:100%;display:block;}
+
+/* ---------- 画像プレースホルダー（横幅いっぱい） ---------- */
+.ph{
+  width:100%;
+  background:
+    repeating-linear-gradient(45deg,#EFE6D6 0 14px,#E9DECB 14px 28px);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  color:#9C8A73;
+  font-size:12px;
+  letter-spacing:.1em;
+  text-align:center;
+  padding:16px;
+}
+.ph svg{width:34px;height:34px;stroke:#B3A088;}
+.ph--fv{min-height:640px;}
+.ph--wide{aspect-ratio:4/3;}
+.ph--banner{aspect-ratio:16/10;}
+.ph--portrait{aspect-ratio:3/4;}
+
+/* ---------- 実写真（横幅いっぱい） ---------- */
+.photo{width:100%;display:block;object-fit:cover;}
+.photo--fv{aspect-ratio:3/4;max-height:82svh;}
+.photo--wide{aspect-ratio:4/3;}
+.photo--banner{aspect-ratio:16/10;}
+.photo--card{
+  width:calc(100% - 48px);
+  margin:28px 24px 20px;
+  border-radius:16px;
+  box-shadow:0 4px 18px rgba(140,106,68,.16);
+}
+
+/* ---------- S字カーブ区切り ---------- */
+.curve{display:block;width:100%;height:70px;margin-bottom:-1px;}
+.curve svg{display:block;width:100%;height:100%;}
+.curve--overlap{margin-top:-69px;position:relative;z-index:3;}
+
+/* ---------- 共通 ---------- */
+section{padding:64px 24px;}
+.sec-label{
+  font-family:var(--serif);
+  font-size:11px;
+  letter-spacing:.35em;
+  color:var(--accent);
+  text-align:center;
+  margin-bottom:10px;
+}
+.sec-title{
+  font-family:var(--serif);
+  font-size:24px;
+  font-weight:600;
+  text-align:center;
+  line-height:1.6;
+  margin-bottom:28px;
+  color:var(--text);
+}
+.sec-title small{display:block;font-size:13px;color:var(--text-soft);margin-top:6px;letter-spacing:.15em;}
+.lead{font-size:14.5px;color:var(--text-soft);text-align:left;}
+
+/* ---------- 固定ヘッダー ---------- */
+.site-header{
+  position:fixed;top:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:480px;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:10px;padding:9px 16px;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(8px);
+  box-shadow:0 1px 10px rgba(78,66,55,.1);
+}
+.sh-name{
+  font-family:var(--serif);font-size:13.5px;font-weight:600;
+  letter-spacing:.04em;color:var(--text);line-height:1.3;
+}
+.sh-name small{
+  display:block;font-size:9px;font-weight:400;
+  color:var(--accent);letter-spacing:.14em;
+}
+.sh-btn{
+  flex-shrink:0;
+  background:var(--green);color:#fff;
+  font-size:12px;font-weight:700;letter-spacing:.05em;
+  padding:9px 16px;border-radius:999px;text-decoration:none;
+}
+.sh-btn:active{opacity:.8;}
+
+/* ---------- ファーストビュー ---------- */
+.fv{padding:0;position:relative;}
+.fv::after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(58,46,36,0) 42%,rgba(58,46,36,.55) 100%);
+}
+.fv-copy{
+  position:absolute;left:24px;bottom:100px;z-index:2;
+  color:#FFFDF8;
+  animation:fvIn 1.4s cubic-bezier(.22,.7,.3,1) .3s both;
+}
+.fv-main{
+  font-family:var(--serif);
+  font-size:27px;font-weight:600;line-height:1.75;letter-spacing:.08em;
+  text-shadow:0 2px 14px rgba(40,30,20,.5);
+}
+.fv-sub{
+  margin-top:10px;
+  font-size:12.5px;letter-spacing:.12em;line-height:1.9;
+  text-shadow:0 1px 8px rgba(40,30,20,.55);
+}
+@keyframes fvIn{
+  from{opacity:0;transform:translateY(22px);}
+  to{opacity:1;transform:none;}
+}
+@media (prefers-reduced-motion: reduce){
+  .fv-copy{animation:none;}
+}
+
+/* ---------- コンセプト ---------- */
+.concept{background:var(--bg);text-align:center;}
+.concept .copy{
+  font-family:var(--serif);
+  font-size:20px;
+  line-height:2.2;
+  margin-bottom:24px;
+}
+.concept .copy em{
+  font-style:normal;
+  background:linear-gradient(transparent 65%,#D8EAD0 65%);
+  padding:0 2px;
+}
+.concept p.body{text-align:left;color:var(--text-soft);font-size:14.5px;}
+.deco-line{
+  width:48px;height:1px;background:var(--green);
+  margin:28px auto;position:relative;
+}
+.deco-line::after{
+  content:"";position:absolute;width:6px;height:6px;border-radius:50%;
+  background:var(--green);top:-2.5px;left:50%;transform:translateX(-50%);
+}
+
+/* ---------- こんな方におすすめ ---------- */
+.osusume{background:var(--bg-soft);}
+.check-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:8px;}
+.check-list li{
+  background:var(--white);
+  border-radius:12px;
+  padding:16px 18px 16px 52px;
+  position:relative;
+  font-size:14.5px;
+  line-height:1.7;
+  box-shadow:0 2px 10px rgba(140,106,68,.07);
+}
+.check-list li::before{
+  content:"✓";
+  position:absolute;left:18px;top:50%;transform:translateY(-50%);
+  width:24px;height:24px;border-radius:50%;
+  background:var(--green);color:#fff;
+  font-size:13px;display:flex;align-items:center;justify-content:center;
+}
+.osusume .closing{
+  margin-top:28px;text-align:center;
+  font-family:var(--serif);font-size:16px;line-height:2;
+}
+
+/* ---------- 特徴 ---------- */
+.feature{background:var(--bg);padding-left:0;padding-right:0;}
+.feature .sec-label,.feature .sec-title{padding:0 24px;}
+.feature-item{margin-bottom:56px;}
+.feature-item:last-child{margin-bottom:0;}
+.feature-body{padding:28px 24px 0;}
+.feature-num{
+  font-family:var(--serif);
+  font-size:12px;letter-spacing:.3em;color:var(--accent);
+  display:flex;align-items:center;gap:12px;margin-bottom:10px;
+}
+.feature-num::after{content:"";flex:1;height:1px;background:#DCCDB4;}
+.feature-body h3{
+  font-family:var(--serif);
+  font-size:19px;font-weight:600;line-height:1.7;margin-bottom:12px;
+}
+.feature-body p{font-size:14.5px;color:var(--text-soft);}
+
+/* ---------- メニュー ---------- */
+.menu{background:var(--bg-soft);}
+.menu-item{
+  background:var(--white);
+  border-radius:14px;
+  padding:24px 22px;
+  margin-bottom:18px;
+  box-shadow:0 2px 12px rgba(140,106,68,.08);
+}
+.menu-item .mi-head{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:8px;margin-bottom:8px;
+}
+.menu-item .tag{
+  display:inline-block;font-size:10.5px;letter-spacing:.1em;
+  background:var(--beige);color:var(--accent-dk);
+  border-radius:999px;padding:3px 11px;
+  flex-shrink:0;white-space:nowrap;
+}
+.menu-item h3{
+  font-family:var(--serif);font-size:17px;font-weight:600;
+  line-height:1.6;flex:1;
+}
+.menu-item .desc{font-size:13.5px;color:var(--text-soft);margin-bottom:14px;}
+.menu-item .price-row{
+  display:flex;justify-content:space-between;align-items:baseline;
+  border-top:1px dashed #D9CBB3;padding-top:12px;
+}
+.menu-item .time{font-size:13px;color:var(--text-soft);}
+.menu-item .price{
+  font-family:var(--serif);font-size:22px;color:var(--accent-dk);
+}
+.menu-item .price span{font-size:12px;}
+.menu-note{font-size:12px;color:var(--text-soft);margin-top:6px;}
+.menu-item .tag--strong{background:var(--green);color:#fff;}
+.first-offer{
+  position:relative;
+  background:#FFFDF8;
+  color:var(--text);text-align:center;
+  border:1.5px solid #C1A470;
+  border-radius:16px;padding:24px 16px 18px;margin-bottom:22px;
+  box-shadow:0 4px 18px rgba(140,106,68,.14);
+  outline:1px dashed #D6C092;
+  outline-offset:-7px;
+}
+.first-offer .fo-en{
+  font-size:9px;letter-spacing:.42em;color:var(--accent);
+  margin-bottom:2px;text-indent:.42em;
+}
+.first-offer .fo-label{
+  font-family:var(--serif);
+  font-size:14px;letter-spacing:.25em;text-indent:.25em;
+  color:var(--text);
+  display:flex;align-items:center;justify-content:center;gap:12px;
+}
+.first-offer .fo-label::before,
+.first-offer .fo-label::after{content:"";width:30px;height:1px;background:#D6C092;}
+.first-offer .fo-body{
+  font-family:var(--serif);margin-top:6px;
+  display:flex;align-items:baseline;justify-content:center;gap:12px;
+}
+.first-offer .fo-menu{font-size:16px;letter-spacing:.1em;color:var(--text);}
+.first-offer .fo-body strong{
+  font-size:46px;font-weight:600;line-height:1.1;letter-spacing:.02em;
+  background:linear-gradient(135deg,#8C6A44 20%,#C9A567 55%,#8C6A44 90%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:var(--accent-dk);
+}
+.first-offer .fo-unit{font-size:24px;margin:0 1px 0 2px;}
+.first-offer .fo-off{font-size:26px;letter-spacing:.06em;}
+.first-offer .fo-note{
+  font-size:10.5px;letter-spacing:.12em;color:var(--text-soft);margin-top:8px;
+}
+.contents{
+  background:var(--green-soft);border-radius:10px;
+  padding:12px 16px;margin-bottom:14px;
+}
+.contents .c-label{
+  font-size:11px;letter-spacing:.2em;color:var(--green-dk);
+  margin-bottom:4px;
+}
+.contents ul{list-style:none;font-size:12.5px;color:var(--text-soft);line-height:1.8;}
+.contents li{padding-left:14px;position:relative;}
+.contents li::before{
+  content:"";position:absolute;left:2px;top:11px;
+  width:5px;height:5px;border-radius:50%;background:var(--green);
+}
+.option-box{
+  background:var(--white);border:1px dashed var(--accent);
+  border-radius:14px;padding:20px 22px;margin-bottom:18px;
+}
+.option-title{
+  font-family:var(--serif);font-size:14px;color:var(--accent-dk);
+  letter-spacing:.12em;text-align:center;margin-bottom:10px;
+}
+.option-row{
+  display:flex;justify-content:space-between;align-items:baseline;
+  font-size:13.5px;padding:9px 0;border-bottom:1px solid #EFE6D4;
+}
+.option-row:last-child{border-bottom:none;padding-bottom:0;}
+.option-price{font-family:var(--serif);font-size:16px;color:var(--accent-dk);}
+.option-price small{font-size:11px;}
+
+/* ---------- 施術の流れ ---------- */
+.flow{background:var(--bg);}
+.flow-list{position:relative;margin-top:8px;}
+.flow-list::before{
+  content:"";position:absolute;left:21px;top:10px;bottom:10px;
+  width:1px;background:var(--green-line);
+}
+.flow-item{
+  position:relative;
+  padding:0 0 32px 62px;
+}
+.flow-item:last-child{padding-bottom:0;}
+.flow-item .step{
+  position:absolute;left:0;top:0;
+  width:43px;height:43px;border-radius:50%;
+  background:var(--green);color:#fff;
+  font-family:var(--serif);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-size:15px;line-height:1;
+}
+.flow-item .step small{font-size:8px;letter-spacing:.1em;margin-bottom:2px;}
+.flow-item h3{
+  font-family:var(--serif);font-size:16.5px;font-weight:600;
+  padding-top:8px;margin-bottom:6px;
+}
+.flow-item h3 .step-note{
+  font-size:11.5px;font-weight:400;color:var(--green-dk);
+  letter-spacing:.06em;margin-left:4px;
+}
+.flow-item p{font-size:13.5px;color:var(--text-soft);}
+
+/* ---------- 代表メッセージ ---------- */
+.message{background:var(--bg);padding-left:0;padding-right:0;}
+.message .sec-label,.message .sec-title{padding:0 24px;}
+.message-body{padding:28px 24px 0;}
+.message-body p{font-size:14.5px;color:var(--text-soft);margin-bottom:18px;}
+.message-sign{
+  text-align:right;font-family:var(--serif);
+  font-size:14px;margin-top:24px;
+}
+.message-sign strong{font-size:18px;font-weight:600;margin-left:10px;white-space:nowrap;}
+.message-sign .sign-kana{font-size:11px;color:var(--text-soft);letter-spacing:.2em;}
+.license{
+  background:var(--green-soft);border-radius:14px;
+  padding:20px 22px;margin-bottom:24px;
+  border:1px solid var(--green-line);
+}
+.license-head{
+  font-family:var(--serif);font-size:13px;letter-spacing:.2em;
+  color:var(--green-dk);text-align:center;margin-bottom:10px;
+  display:flex;align-items:center;gap:12px;justify-content:center;
+}
+.license-head::before,.license-head::after{content:"";width:26px;height:1px;background:var(--green);}
+.license ul{list-style:none;font-size:13.5px;line-height:1.8;}
+.license li{padding:8px 0 8px 26px;position:relative;border-bottom:1px solid var(--green-line);}
+.license li:last-child{border-bottom:none;}
+.license li::before{
+  content:"◆";position:absolute;left:4px;top:8px;
+  font-size:10px;color:var(--green);
+}
+.license li strong{color:var(--accent-dk);}
+.license li small{font-size:11.5px;color:var(--text-soft);}
+
+/* ---------- Q&A ---------- */
+.qa{background:var(--bg-soft);}
+.qa details{
+  background:var(--white);border-radius:12px;
+  margin-bottom:14px;overflow:hidden;
+  box-shadow:0 2px 10px rgba(140,106,68,.07);
+}
+.qa summary{
+  list-style:none;cursor:pointer;
+  padding:18px 44px 18px 52px;
+  font-size:14.5px;font-weight:500;line-height:1.6;
+  position:relative;
+}
+.qa summary::-webkit-details-marker{display:none;}
+.qa summary::before{
+  content:"Q";
+  position:absolute;left:18px;top:17px;
+  font-family:var(--serif);font-size:16px;color:var(--accent);
+}
+.qa summary::after{
+  content:"＋";
+  position:absolute;right:18px;top:50%;transform:translateY(-50%);
+  color:var(--green);font-size:15px;transition:transform .25s;
+}
+.qa details[open] summary::after{content:"−";}
+.qa .answer{
+  padding:0 20px 18px 52px;
+  font-size:13.5px;color:var(--text-soft);
+  position:relative;
+}
+.qa .answer::before{
+  content:"A";
+  position:absolute;left:18px;top:-2px;
+  font-family:var(--serif);font-size:16px;color:var(--green);
+}
+
+/* ---------- サロン情報 ---------- */
+.info{background:var(--bg);padding-left:0;padding-right:0;}
+.info .sec-label,.info .sec-title{padding:0 24px;}
+.info-table{width:100%;border-collapse:collapse;margin:28px 0 0;}
+.info-table th,.info-table td{
+  padding:14px 8px;border-bottom:1px solid #E3D7C2;
+  font-size:13.5px;text-align:left;vertical-align:top;line-height:1.7;
+}
+.info-table th{
+  width:92px;color:var(--accent-dk);font-weight:500;
+  white-space:nowrap;letter-spacing:.06em;
+}
+.info-inner{padding:0 24px;}
+.map-embed iframe{width:100%;height:300px;border:0;display:block;}
+.map-note{
+  font-size:11px;color:var(--text-soft);letter-spacing:.06em;
+  padding:10px 24px 0;text-align:center;
+}
+.sns{text-align:center;margin-top:36px;}
+.sns-lead{
+  font-size:12.5px;color:var(--text-soft);letter-spacing:.08em;
+  margin-bottom:12px;
+  display:flex;align-items:center;justify-content:center;gap:12px;
+}
+.sns-lead::before,.sns-lead::after{content:"";width:22px;height:1px;background:#CBB791;}
+.sns-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 28px;border-radius:999px;
+  background:linear-gradient(45deg,#F09433 0%,#E6683C 25%,#DC2743 50%,#CC2366 75%,#BC1888 100%);
+  color:#fff;
+  font-size:14.5px;font-weight:700;letter-spacing:.05em;
+  text-decoration:none;
+  box-shadow:0 4px 14px rgba(204,35,102,.3);
+  transition:opacity .2s;
+}
+.sns-btn:active{opacity:.8;}
+.sns-btn svg{width:20px;height:20px;color:#fff;}
+
+/* ---------- CTA ---------- */
+.cta{
+  background:linear-gradient(160deg,#8C6A44,#A8845C);
+  text-align:center;color:#FFF9EF;
+  padding:64px 24px 72px;
+}
+.cta .cta-title{
+  font-family:var(--serif);font-size:21px;line-height:1.9;margin-bottom:14px;
+}
+.cta p{font-size:13.5px;opacity:.9;margin-bottom:28px;}
+.btn{
+  display:block;width:100%;max-width:320px;margin:0 auto 14px;
+  padding:17px 10px;border-radius:999px;
+  font-size:15.5px;font-weight:700;letter-spacing:.08em;
+  text-decoration:none;text-align:center;
+  transition:opacity .2s;
+}
+.btn:active{opacity:.8;}
+.btn-line{background:#06C755;color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.18);}
+.btn-web{background:var(--white);color:var(--accent-dk);box-shadow:0 4px 14px rgba(0,0,0,.15);}
+.cta .small{font-size:11.5px;opacity:.75;margin:6px 0 0;}
+
+/* ---------- フッター ---------- */
+footer{
+  background:#4E4237;color:#D8CCBB;
+  text-align:center;font-size:11px;letter-spacing:.1em;
+  padding:26px 20px 110px;
+}
+
+/* ---------- スクロールアニメーション ---------- */
+.anim{opacity:0;transition:opacity .9s ease,transform .9s cubic-bezier(.22,.7,.3,1);will-change:opacity,transform;}
+.anim--left{transform:translateX(-40px);}
+.anim--right{transform:translateX(40px);}
+.anim--up{transform:translateY(26px);}
+.anim.in{opacity:1;transform:none;}
+.check-list li.anim:nth-child(2){transition-delay:.08s;}
+.check-list li.anim:nth-child(3){transition-delay:.16s;}
+.check-list li.anim:nth-child(4){transition-delay:.24s;}
+.check-list li.anim:nth-child(5){transition-delay:.32s;}
+.check-list li.anim:nth-child(6){transition-delay:.4s;}
+.check-list li.anim:nth-child(7){transition-delay:.48s;}
+@media (prefers-reduced-motion: reduce){
+  .anim{opacity:1;transform:none;transition:none;}
+}
+
+/* ---------- 追従予約バー ---------- */
+.fixed-cta{
+  position:fixed;bottom:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:480px;
+  display:flex;gap:10px;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(255,253,249,.94);
+  backdrop-filter:blur(6px);
+  box-shadow:0 -4px 18px rgba(78,66,55,.15);
+  z-index:100;
+}
+.fixed-cta a{
+  flex:1;text-align:center;text-decoration:none;
+  padding:13px 4px;border-radius:999px;
+  font-size:13.5px;font-weight:700;letter-spacing:.05em;
+}
+.fixed-cta .f-line{background:#06C755;color:#fff;}
+.fixed-cta .f-web{background:var(--accent);color:#fff;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ▼ 固定ヘッダー -->
+  <header class="site-header">
+    <p class="sh-name">プライベートサロン アイデアル<small>privatesalon.ideal</small></p>
+    <a class="sh-btn" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ22miqRCbo_GsPH7W1SpZHVUITJT9_RLHeTW8gyauZdXJKnk3R6x7j-9DeYx0Bt7KV7H0Gz3FWX" target="_blank" rel="noopener">WEB予約</a>
+  </header>
+
+  <!-- ▼ ファーストビュー（画像差し替え予定） -->
+  <section class="fv">
+    <img class="photo photo--fv" src="images/fv.jpg" alt="プライベートサロン アイデアルの施術風景">
+    <div class="fv-copy">
+      <p class="fv-main">腸から、健康で<br>美しく、幸せに。</p>
+      <p class="fv-sub">腸もみ×リンパで巡りを整える<br>熊本のプライベートサロン</p>
+    </div>
+  </section>
+
+  <!-- S字カーブ：FV → コンセプト（写真に重ねる） -->
+  <div class="curve curve--overlap">
+    <svg viewBox="0 0 480 70" preserveAspectRatio="none"><path d="M0,55 C120,5 300,80 480,20 L480,70 L0,70 Z" fill="#FFFFFF"/></svg>
+  </div>
+
+  <!-- ▼ コンセプト -->
+  <section class="concept">
+    <p class="sec-label">CONCEPT</p>
+    <p class="copy anim anim--right" style="margin-top:14px;">がんばる毎日に、<br><em>“おなかから整える”</em><br>という選択を。</p>
+    <div class="deco-line"></div>
+    <p class="body">
+      冷え、むくみ、便秘、なんとなく続く不調——。
+      その原因のひとつは、腸とリンパの「巡りの滞り」にあるかもしれません。<br><br>
+      「プライベートサロン アイデアル」は、腸もみとリンパケアを組み合わせた施術で、
+      からだの内側から巡りを整える熊本のプライベートサロンです。
+      内側からは乳酸菌でのアプローチ。
+      外側からは、リンパや腸もみのアプローチでめぐりを整えます。
+      両方から働きかけることで、不調の根本解決へと導きます。
+    </p>
+  </section>
+
+  <!-- S字カーブ：→ おすすめ -->
+  <div class="curve" style="background:#FFFFFF;">
+    <svg viewBox="0 0 480 70" preserveAspectRatio="none"><path d="M0,20 C180,75 340,0 480,50 L480,70 L0,70 Z" fill="#F7F3EA"/></svg>
+  </div>
+
+  <!-- ▼ こんな方におすすめ -->
+  <section class="osusume">
+    <p class="sec-label">RECOMMEND</p>
+    <h2 class="sec-title anim anim--left">こんなお悩み、<br>ありませんか？</h2>
+    <ul class="check-list">
+      <li class="anim anim--left">手足やおなかがいつも冷えている</li>
+      <li class="anim anim--left">夕方になると脚のむくみがつらい</li>
+      <li class="anim anim--left">便秘・ガス溜まりでおなかが張りやすい</li>
+      <li class="anim anim--left">生理前のイライラや落ち込みが重い</li>
+      <li class="anim anim--left">寝ても疲れが抜けず、朝からだるい</li>
+      <li class="anim anim--left">肌のくすみ・吹き出物が気になる</li>
+      <li class="anim anim--left">マッサージに行っても、すぐ元に戻ってしまう</li>
+    </ul>
+    <p class="closing anim anim--up">ひとつでも当てはまったら、<br>それは<strong>“巡り”からのサイン</strong>です。</p>
+  </section>
+
+  <!-- S字カーブ：→ 特徴 -->
+  <div class="curve" style="background:#F7F3EA;">
+    <svg viewBox="0 0 480 70" preserveAspectRatio="none"><path d="M0,50 C140,0 320,75 480,25 L480,70 L0,70 Z" fill="#FFFFFF"/></svg>
+  </div>
+
+  <!-- ▼ 特徴 -->
+  <section class="feature">
+    <p class="sec-label">FEATURES</p>
+    <h2 class="sec-title">当サロンの特徴<small>3つのアプローチ</small></h2>
+
+    <div class="feature-item">
+      <img class="photo photo--wide" src="images/chomomi.jpg" alt="おなかをやさしくほぐす腸もみの施術">
+      <div class="feature-body anim anim--left">
+        <p class="feature-num">FEATURE 01</p>
+        <h3>“第二の脳”腸から整える<br>オールハンドの腸もみ</h3>
+        <p>腸は消化だけでなく、自律神経やホルモンバランス、免疫にも深く関わる「第二の脳」。おなか周りをやさしくほぐす腸もみで、滞りがちな腸の動きをサポートし、内側から巡りやすい身体へ導きます。</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <img class="photo photo--wide" src="images/lymph.jpg" alt="オールハンドのリンパドレナージュ施術">
+      <div class="feature-body anim anim--right">
+        <p class="feature-num">FEATURE 02</p>
+        <h3>老廃物を流す<br>全身リンパドレナージュ</h3>
+        <p>リンパの流れが滞ると、むくみ・冷え・だるさの原因に。脚から鎖骨まで、リンパの走行に沿って丁寧に流すことで、老廃物の排出を促し、軽やかな巡りのよい身体をつくります。腸もみとの相乗効果で、施術後のスッキリ感が違います。</p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <img class="photo photo--wide" src="images/counseling.jpg" alt="お客様の体調を丁寧にヒアリングするカウンセリング">
+      <div class="feature-body anim anim--left">
+        <p class="feature-num">FEATURE 03</p>
+        <h3>厳選した乳酸菌サプリで<br>内側からもアプローチ</h3>
+        <p>脳腸皮膚口腔相関アドバイザーであるオーナーが厳選した、腸内から整える乳酸菌関連のサプリメントなども取り扱っています。施術による外側からのケアと、乳酸菌による内側からのケア。両方からアプローチできるのが当サロンの強みです。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- S字カーブ：→ メニュー -->
+  <div class="curve" style="background:#FFFFFF;">
+    <svg viewBox="0 0 480 70" preserveAspectRatio="none"><path d="M0,25 C160,75 330,0 480,45 L480,70 L0,70 Z" fill="#F7F3EA"/></svg>
+  </div>
+
+  <!-- ▼ メニュー -->
+  <section class="menu">
+    <p class="sec-label">MENU</p>
+    <h2 class="sec-title">メニュー</h2>
+
+    <div class="first-offer anim anim--up">
+      <p class="fo-en">FIRST VISIT COUPON</p>
+      <p class="fo-label">初回限定特典</p>
+      <p class="fo-body"><span class="fo-menu">全メニュー</span><strong>10<span class="fo-unit">%</span><span class="fo-off">OFF</span></strong></p>
+      <p class="fo-note">はじめてご来店の方が対象です</p>
+    </div>
+
+    <div class="menu-item">
+      <div class="mi-head"><h3>全身リンパ</h3><span class="tag tag--strong">人気No.1</span></div>
+      <p class="desc">全身のリンパをじっくり流し、むくみ・冷え・だるさをリセットするいちばん人気のコース。</p>
+      <div class="contents">
+        <p class="c-label">施術内容</p>
+        <ul>
+          <li>足湯</li>
+          <li>ボディ60分</li>
+          <li>うつ伏せ：足・背中</li>
+          <li>あおむけ：足・お腹・うで・デコルテ</li>
+        </ul>
+      </div>
+      <div class="price-row">
+        <span class="time">60分</span>
+        <span class="price">¥8,800<span>（税込）</span></span>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <div class="mi-head"><h3>ホットストーン＆腸もみ</h3><span class="tag tag--strong">おすすめ</span></div>
+      <p class="desc">温めたストーンでおなかと骨盤まわりをケア。腸から整えたい方へのおすすめメニュー。</p>
+      <div class="contents">
+        <p class="c-label">施術内容</p>
+        <ul>
+          <li>骨盤ケア＋腸もみ</li>
+        </ul>
+      </div>
+      <div class="price-row">
+        <span class="time">50分</span>
+        <span class="price">¥8,800<span>（税込）</span></span>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <div class="mi-head"><h3>フェイシャル＆ボディ</h3><span class="tag">しっかりケア</span></div>
+      <p class="desc">お顔と全身をまるごとケアする贅沢なフルコース。特別な日の前にも。</p>
+      <div class="contents">
+        <p class="c-label">施術内容</p>
+        <ul>
+          <li>足湯</li>
+          <li>フェイシャル60分（クレンジング洗顔・洗い流しパック・小顔マッサージ・仕上げパック）</li>
+          <li>ボディ60分</li>
+          <li>うつ伏せ：足・背中</li>
+          <li>あおむけ：足・お腹・うで・デコルテ</li>
+        </ul>
+      </div>
+      <div class="price-row">
+        <span class="time">120分</span>
+        <span class="price">¥16,500<span>（税込）</span></span>
+      </div>
+    </div>
+
+    <div class="option-box">
+      <p class="option-title">オプションメニュー</p>
+      <div class="option-row"><span>ヘッドスパ（15分）</span><span class="option-price">¥2,200<small>（税込）</small></span></div>
+      <div class="option-row"><span>ホットストーン（15分）</span><span class="option-price">¥3,300<small>（税込）</small></span></div>
+    </div>
+
+    <p class="menu-note">※ 表示価格はすべて税込です。</p>
+  </section>
+
+  <!-- S字カーブ：→ 流れ -->
+  <div class="curve" style="background:#F7F3EA;">
+    <svg viewBox="0 0 480 70" preserveAspectRatio="none"><path d="M0,45 C150,0 320,80 480,20 L480,70 L0,70 Z" fill="#FFFFFF"/></svg>
+  </div>
+
+  <!-- ▼ 施術の流れ -->
+  <section class="flow">
+    <p class="sec-label">FLOW</p>
+    <h2 class="sec-title">施術の流れ</h2>
+    <div class="flow-list">
+      <div class="flow-item">
+        <div class="step"><small>STEP</small>1</div>
+        <h3>ご予約</h3>
+        <p>WEB予約（24時間受付）またはLINEからご希望の日時をお選びください。完全予約制です。</p>
+      </div>
+      <div class="flow-item">
+        <div class="step"><small>STEP</small>2</div>
+        <h3>カウンセリング</h3>
+        <p>ハーブティーをお飲みいただきながら、体調やお悩み、生活習慣を丁寧にヒアリング。その日のコンディションに合わせて施術内容をご提案します。</p>
+      </div>
+      <div class="flow-item">
+        <div class="step"><small>STEP</small>3</div>
+        <h3>お着替え</h3>
+        <p>施術用のお着替えをご用意しています。お仕事帰りでも手ぶらでお越しいただけます。</p>
+      </div>
+      <div class="flow-item">
+        <div class="step"><small>STEP</small>4</div>
+        <h3>足湯<small class="step-note">（リンパコースの場合）</small></h3>
+        <p>リンパの施術の前には足湯で足元からじんわり温め、巡りやすい状態に整えてから施術に入ります。</p>
+      </div>
+      <div class="flow-item">
+        <div class="step"><small>STEP</small>5</div>
+        <h3>施術</h3>
+        <p>腸もみ・リンパドレナージュで全身の巡りをじっくり整えます。力加減はお好みに合わせて調整いたします。</p>
+      </div>
+      <div class="flow-item">
+        <div class="step"><small>STEP</small>6</div>
+        <h3>アフターアドバイス</h3>
+        <p>お身体の状態をご説明し、ご自宅でできる腸活・セルフケアもお伝えします。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- S字カーブ：→ 代表メッセージ -->
+  <div class="curve" style="background:#FFFFFF;">
+    <svg viewBox="0 0 480 70" preserveAspectRatio="none"><path d="M0,50 C130,5 340,75 480,25 L480,70 L0,70 Z" fill="#FFFFFF"/></svg>
+  </div>
+
+  <!-- ▼ 代表からのメッセージ -->
+  <section class="message">
+    <p class="sec-label">MESSAGE</p>
+    <h2 class="sec-title">代表からのメッセージ</h2>
+    <img class="photo" src="images/owner.jpg" alt="プライベートサロン アイデアル 代表 久富吏紗" style="margin-top:28px;">
+    <div class="message-body">
+      <div class="license">
+        <p class="license-head">代表の資格・経歴</p>
+        <ul>
+          <li><strong>熊本に2名だけ</strong>の「エイチジン特別パートナー」<br><small>（脳腸皮膚口腔相関アドバイザー）</small></li>
+          <li>セラピスト歴 <strong>19年</strong></li>
+        </ul>
+      </div>
+      <p>はじめまして。「プライベートサロン アイデアル」代表の久富 吏紗（ひさとみ りさ）です。</p>
+      <p>セラピストとして19年、たくさんのお客様のお身体に触れてきました。そんな中で乳酸菌に出会い、腸と脳がつながっていることを知って、「お客様を内側からきれいにしたい」と思うようになりました。</p>
+      <p>当サロンでは、内側からは乳酸菌で腸をケアし、外側からは骨盤の歪みやコリにアプローチ。内側と外側の両方から働きかけることで、より早く効果を実感していただき、不調の根本解決へと導くお手伝いをしています。</p>
+      <p>健康的に、リバウンドせずに痩せたい方にも喜ばれています。あなたの「なりたい自分」を、腸から一緒に叶えていきましょう。</p>
+      <p class="message-sign">プライベートサロン アイデアル 代表<strong>久富 吏紗</strong><br><span class="sign-kana">ひさとみ りさ</span></p>
+    </div>
+  </section>
+
+  <!-- S字カーブ：→ Q&A -->
+  <div class="curve" style="background:#FFFFFF;">
+    <svg viewBox="0 0 480 70" preserveAspectRatio="none"><path d="M0,25 C150,70 340,0 480,50 L480,70 L0,70 Z" fill="#F7F3EA"/></svg>
+  </div>
+
+  <!-- ▼ Q&A -->
+  <section class="qa">
+    <p class="sec-label">Q&amp;A</p>
+    <h2 class="sec-title">よくあるご質問</h2>
+
+    <details>
+      <summary>腸もみは痛くないですか？</summary>
+      <p class="answer">痛みを感じない、心地よい圧で行います。「痛いほど効く」施術ではありませんのでご安心ください。力加減はいつでもお申し付けいただけます。</p>
+    </details>
+    <details>
+      <summary>生理中でも施術は受けられますか？</summary>
+      <p class="answer">体調が安定していればお受けいただけますが、経血量の多い日はリンパ中心のメニューへの変更をおすすめしています。ご予約時にお気軽にご相談ください。</p>
+    </details>
+    <details>
+      <summary>どのくらいのペースで通えばいいですか？</summary>
+      <p class="answer">お悩みの程度にもよりますが、はじめの1〜2ヶ月は2週間に1回、その後は月1回のメンテナンスがおすすめです。カウンセリングで最適なペースをご提案します。</p>
+    </details>
+    <details>
+      <summary>食後すぐでも大丈夫ですか？</summary>
+      <p class="answer">腸もみはおなかへの施術のため、食後2時間ほど空けてのご来店をおすすめしています。お時間が近い場合は軽めのお食事でお越しください。</p>
+    </details>
+    <details>
+      <summary>妊娠中・産後でも受けられますか？</summary>
+      <p class="answer">妊娠中の方は腸もみをお受けいただけません。産後は経過にもよりますが、1ヶ月検診で問題がなければご相談のうえ施術可能です。</p>
+    </details>
+    <details>
+      <summary>男性も利用できますか？</summary>
+      <p class="answer">当サロンは女性専用のプライベートサロンです。あらかじめご了承ください。</p>
+    </details>
+  </section>
+
+  <!-- S字カーブ：→ サロン情報 -->
+  <div class="curve" style="background:#F7F3EA;">
+    <svg viewBox="0 0 480 70" preserveAspectRatio="none"><path d="M0,45 C160,0 330,75 480,25 L480,70 L0,70 Z" fill="#FFFFFF"/></svg>
+  </div>
+
+  <!-- ▼ サロン情報・アクセス（提案セクション） -->
+  <section class="info">
+    <p class="sec-label">SALON INFO</p>
+    <h2 class="sec-title">サロン情報・アクセス</h2>
+    <img class="photo photo--banner photo--card" src="images/salon.jpg" alt="サロン内観 落ち着いたベージュトーンの完全個室">
+    <div class="map-embed">
+      <iframe
+        src="https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1z54aK5pys5biC5p2x5Yy65LiJ6YOOMeS4geebrg!6i15"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="サロン周辺地図（熊本市東区三郎1丁目）"
+        allowfullscreen></iframe>
+      <p class="map-note">※ 三郎1丁目周辺の地図です。詳細な場所はご予約時にお伝えします。</p>
+    </div>
+    <div class="info-inner">
+      <table class="info-table">
+        <tr><th>サロン名</th><td>プライベートサロン アイデアル<br><small style="color:var(--text-soft);">privatesalon.ideal</small></td></tr>
+        <tr><th>場所</th><td>熊本市三郎1丁目<br><small style="color:var(--text-soft);">（詳細はご予約時にお伝えします）</small></td></tr>
+        <tr><th>駐車場</th><td>1台あり</td></tr>
+        <tr><th>営業時間</th><td>9:00〜20:00</td></tr>
+        <tr><th>ご予約</th><td>完全予約制（WEB予約・LINE）</td></tr>
+      </table>
+
+      <div class="sns">
+        <p class="sns-lead">サロンの日常・腸活情報を発信中</p>
+        <a class="sns-btn" href="https://www.instagram.com/privatesalon.ideal/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg>
+          @privatesalon.ideal
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- S字カーブ：→ CTA -->
+  <div class="curve" style="background:#FFFFFF;">
+    <svg viewBox="0 0 480 70" preserveAspectRatio="none"><path d="M0,55 C140,10 320,75 480,15 L480,70 L0,70 Z" fill="#8C6A44"/></svg>
+  </div>
+
+  <!-- ▼ 予約CTA -->
+  <section class="cta">
+    <p class="cta-title">腸から整える心地よさを、<br>まずは一度ご体験ください。</p>
+    <p>初回の方は全メニュー<strong>10%OFF</strong>。<br>ご予約は24時間WEBから承っています。</p>
+    <a class="btn btn-web" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ22miqRCbo_GsPH7W1SpZHVUITJT9_RLHeTW8gyauZdXJKnk3R6x7j-9DeYx0Bt7KV7H0Gz3FWX" target="_blank" rel="noopener">WEB予約はこちら</a>
+    <a class="btn btn-line" href="https://lin.ee/Q8LxZAp" target="_blank" rel="noopener">LINEで予約・相談する</a>
+    <p class="small">※ ご不明な点はLINEからお気軽にご相談ください。</p>
+  </section>
+
+  <footer>
+    © 2026 privatesalon.ideal All Rights Reserved.
+  </footer>
+
+  <!-- ▼ 追従予約バー -->
+  <div class="fixed-cta">
+    <a class="f-web" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ22miqRCbo_GsPH7W1SpZHVUITJT9_RLHeTW8gyauZdXJKnk3R6x7j-9DeYx0Bt7KV7H0Gz3FWX" target="_blank" rel="noopener">WEB予約</a>
+    <a class="f-line" href="https://lin.ee/Q8LxZAp" target="_blank" rel="noopener">LINEで相談</a>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.anim').forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>
